@@ -23,26 +23,26 @@
             </objects>
             <point key="canvasLocation" x="590" y="234"/>
         </scene>
-        <!--Item 1-->
+        <!--Home View Controller-->
         <scene sceneID="Eno-bE-kbG">
             <objects>
-                <viewController id="JkE-RL-YBy" sceneMemberID="viewController">
+                <viewController title="Home View Controller" id="JkE-RL-YBy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jau-qN-fV9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="EvJ-mU-1i0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="cmf-Je-EoV"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="cmf-Je-EoV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hca-Gm-h3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="590" y="-414"/>
+            <point key="canvasLocation" x="589.85507246376812" y="-414.50892857142856"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="PvF-aI-fJ7">
             <objects>
-                <tabBarController title="Home View Controller" id="E6O-Is-WIH" sceneMemberID="viewController">
+                <tabBarController id="E6O-Is-WIH" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FKz-yu-8CR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
