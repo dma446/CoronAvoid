@@ -3,27 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1335FE972441B0B4001DFA70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1335FE962441B0B4001DFA70 /* GoogleService-Info.plist */; };
+		1335FE992441E6F7001DFA70 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1335FE982441E6F7001DFA70 /* SignInViewController.swift */; };
 		133F88D524381A9300D501D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F88D424381A9300D501D8 /* AppDelegate.swift */; };
 		133F88D724381A9300D501D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F88D624381A9300D501D8 /* SceneDelegate.swift */; };
-		133F88D924381A9300D501D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F88D824381A9300D501D8 /* ViewController.swift */; };
+		133F88D924381A9300D501D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F88D824381A9300D501D8 /* HomeViewController.swift */; };
 		133F88DC24381A9300D501D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133F88DA24381A9300D501D8 /* Main.storyboard */; };
 		133F88DE24381A9600D501D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133F88DD24381A9600D501D8 /* Assets.xcassets */; };
 		133F88E124381A9600D501D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133F88DF24381A9600D501D8 /* LaunchScreen.storyboard */; };
+		13EEF942244368AD009A1C51 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EEF941244368AD009A1C51 /* SettingsViewController.swift */; };
+		AD242DC657855FDB11DFBB5F /* Pods_CoronAvoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD70AB7FD838C3349C46ED7 /* Pods_CoronAvoid.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BD70AB7FD838C3349C46ED7 /* Pods_CoronAvoid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronAvoid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1335FE962441B0B4001DFA70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1335FE982441E6F7001DFA70 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		133F88D124381A9300D501D8 /* CoronAvoid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoronAvoid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		133F88D424381A9300D501D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		133F88D624381A9300D501D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		133F88D824381A9300D501D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		133F88D824381A9300D501D8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		133F88DB24381A9300D501D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		133F88DD24381A9600D501D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		133F88E024381A9600D501D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		133F88E224381A9600D501D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13EEF941244368AD009A1C51 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		637522369C8D2FC311AEE54E /* Pods-CoronAvoid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronAvoid.release.xcconfig"; path = "Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid.release.xcconfig"; sourceTree = "<group>"; };
+		887848CA4ED4D2D48B729F5A /* Pods-CoronAvoid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronAvoid.debug.xcconfig"; path = "Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD242DC657855FDB11DFBB5F /* Pods_CoronAvoid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,8 @@
 			children = (
 				133F88D324381A9300D501D8 /* CoronAvoid */,
 				133F88D224381A9300D501D8 /* Products */,
+				FC0D2FB115941DF56DF4A045 /* Pods */,
+				AC27C6E35A28480819BA942A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +71,33 @@
 			children = (
 				133F88D424381A9300D501D8 /* AppDelegate.swift */,
 				133F88D624381A9300D501D8 /* SceneDelegate.swift */,
-				133F88D824381A9300D501D8 /* ViewController.swift */,
+				133F88D824381A9300D501D8 /* HomeViewController.swift */,
+				13EEF941244368AD009A1C51 /* SettingsViewController.swift */,
+				1335FE982441E6F7001DFA70 /* SignInViewController.swift */,
 				133F88DA24381A9300D501D8 /* Main.storyboard */,
 				133F88DD24381A9600D501D8 /* Assets.xcassets */,
 				133F88DF24381A9600D501D8 /* LaunchScreen.storyboard */,
 				133F88E224381A9600D501D8 /* Info.plist */,
+				1335FE962441B0B4001DFA70 /* GoogleService-Info.plist */,
 			);
 			path = CoronAvoid;
+			sourceTree = "<group>";
+		};
+		AC27C6E35A28480819BA942A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BD70AB7FD838C3349C46ED7 /* Pods_CoronAvoid.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC0D2FB115941DF56DF4A045 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				887848CA4ED4D2D48B729F5A /* Pods-CoronAvoid.debug.xcconfig */,
+				637522369C8D2FC311AEE54E /* Pods-CoronAvoid.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 133F88E524381A9600D501D8 /* Build configuration list for PBXNativeTarget "CoronAvoid" */;
 			buildPhases = (
+				10D0D0C3159F2E327D166694 /* [CP] Check Pods Manifest.lock */,
 				133F88CD24381A9300D501D8 /* Sources */,
 				133F88CE24381A9300D501D8 /* Frameworks */,
 				133F88CF24381A9300D501D8 /* Resources */,
+				23549AF4CB6D1BB62A58937F /* [CP] Embed Pods Frameworks */,
+				C8A176A16896D3CC4555A505 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				133F88E124381A9600D501D8 /* LaunchScreen.storyboard in Resources */,
+				1335FE972441B0B4001DFA70 /* GoogleService-Info.plist in Resources */,
 				133F88DE24381A9600D501D8 /* Assets.xcassets in Resources */,
 				133F88DC24381A9300D501D8 /* Main.storyboard in Resources */,
 			);
@@ -133,13 +170,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10D0D0C3159F2E327D166694 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoronAvoid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23549AF4CB6D1BB62A58937F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8A176A16896D3CC4555A505 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		133F88CD24381A9300D501D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				133F88D924381A9300D501D8 /* ViewController.swift in Sources */,
+				133F88D924381A9300D501D8 /* HomeViewController.swift in Sources */,
 				133F88D524381A9300D501D8 /* AppDelegate.swift in Sources */,
+				1335FE992441E6F7001DFA70 /* SignInViewController.swift in Sources */,
+				13EEF942244368AD009A1C51 /* SettingsViewController.swift in Sources */,
 				133F88D724381A9300D501D8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +380,7 @@
 		};
 		133F88E624381A9600D501D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 887848CA4ED4D2D48B729F5A /* Pods-CoronAvoid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,7 +390,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nyu.CoronAvoid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoronAvoid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,6 +399,7 @@
 		};
 		133F88E724381A9600D501D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 637522369C8D2FC311AEE54E /* Pods-CoronAvoid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -309,7 +409,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nyu.CoronAvoid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoronAvoid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
