@@ -17,10 +17,6 @@ class SignInViewController: UIViewController, GIDSignInDelegate {
         super.viewDidLoad()
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.delegate = self
-        let user = Auth.auth().currentUser
-        if user?.uid != nil {
-            signIn()
-        }
     }
     
     func signIn() {
