@@ -132,12 +132,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ta4-VI-6z8">
+                                <rect key="frame" x="159.5" y="169" width="95" height="92"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="smiley" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="80" weight="medium"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.40392156862745099" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dQS-pP-dXE" firstAttribute="centerX" secondItem="EvJ-mU-1i0" secondAttribute="centerX" id="995-mO-1Wc"/>
                             <constraint firstItem="YDB-y2-qV2" firstAttribute="top" secondItem="oGm-t8-t7f" secondAttribute="bottom" constant="10" id="JAW-3E-i52"/>
                             <constraint firstItem="zbi-q0-4pD" firstAttribute="centerX" secondItem="YDB-y2-qV2" secondAttribute="centerX" id="LgH-l9-WKY"/>
+                            <constraint firstItem="ta4-VI-6z8" firstAttribute="centerX" secondItem="EvJ-mU-1i0" secondAttribute="centerX" id="MEp-SW-UAC"/>
+                            <constraint firstItem="zbi-q0-4pD" firstAttribute="top" secondItem="ta4-VI-6z8" secondAttribute="bottom" constant="30" id="MKO-BA-1KY"/>
                             <constraint firstItem="pxS-CW-2eg" firstAttribute="centerX" secondItem="YDB-y2-qV2" secondAttribute="centerX" id="QLd-pc-kgs"/>
                             <constraint firstItem="oGm-t8-t7f" firstAttribute="top" secondItem="pxS-CW-2eg" secondAttribute="bottom" constant="10" id="UwT-L8-b2R"/>
                             <constraint firstItem="oGm-t8-t7f" firstAttribute="centerX" secondItem="YDB-y2-qV2" secondAttribute="centerX" id="auj-nt-24F"/>
@@ -155,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hca-Gm-h3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052" y="-402"/>
+            <point key="canvasLocation" x="1050.7246376811595" y="-402.45535714285711"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="yV3-Ai-JUw">
@@ -197,13 +206,32 @@
                     <view key="view" contentMode="scaleToFill" id="UWZ-qa-L40">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FbV-fP-leT">
+                                <rect key="frame" x="182.5" y="388.5" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waD-qk-HcO">
+                                <rect key="frame" x="50" y="50" width="79.5" height="29"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title=" Close" image="xmark.circle.fill" catalog="system">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FbV-fP-leT" firstAttribute="centerX" secondItem="oyu-CS-at0" secondAttribute="centerX" id="FDu-Ny-V6t"/>
+                            <constraint firstItem="waD-qk-HcO" firstAttribute="leading" secondItem="oyu-CS-at0" secondAttribute="leading" constant="50" id="e9s-0a-w4I"/>
+                            <constraint firstItem="FbV-fP-leT" firstAttribute="centerY" secondItem="oyu-CS-at0" secondAttribute="centerY" id="m13-L6-Hi9"/>
+                            <constraint firstItem="waD-qk-HcO" firstAttribute="top" secondItem="oyu-CS-at0" secondAttribute="top" constant="50" id="vLF-Zy-ZQg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oyu-CS-at0"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIB-sX-EaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9" y="394"/>
+            <point key="canvasLocation" x="8.6956521739130448" y="393.75"/>
         </scene>
         <!--Leaderboard View Controller-->
         <scene sceneID="uS3-FI-fAS">
@@ -241,5 +269,7 @@
         <image name="hammer" catalog="system" width="64" height="56"/>
         <image name="list.number.rtl" catalog="system" width="64" height="48"/>
         <image name="questionmark.diamond" catalog="system" width="64" height="60"/>
+        <image name="smiley" catalog="system" width="64" height="60"/>
+        <image name="xmark.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>
