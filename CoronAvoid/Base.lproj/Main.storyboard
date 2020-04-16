@@ -12,7 +12,7 @@
             <objects>
                 <viewController title="Settings View Controller" id="W50-pX-WfL" customClass="SettingsViewController" customModule="CoronAvoid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SDf-kb-FnP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vg2-e2-OEt">
@@ -46,7 +46,6 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EG8-Zh-LyG">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
-                                        <color key="backgroundColor" red="1" green="0.68235294120000001" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="Atc-N0-sFZ"/>
                                             <constraint firstAttribute="width" constant="70" id="iga-gk-lWZ"/>
@@ -55,19 +54,11 @@
                                         <state key="normal" image="badge.plus.radiowaves.right" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="65"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="24"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="wEk-Jw-U0G" kind="presentation" id="fJN-Xg-u9F"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yeg-6D-30m" customClass="circleButton" customModule="CoronAvoid" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yeg-6D-30m">
                                         <rect key="frame" x="102" y="0.0" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="Whc-jD-NLB"/>
@@ -77,19 +68,11 @@
                                         <state key="normal" image="list.number.rtl" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="24"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="q2X-JX-OjI" kind="presentation" id="eqE-ns-Lh1"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0th-Bt-SZw" customClass="circleButton" customModule="CoronAvoid" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0th-Bt-SZw">
                                         <rect key="frame" x="204" y="0.0" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="CRz-ko-nUf"/>
@@ -99,19 +82,11 @@
                                         <state key="normal" image="questionmark.diamond" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="24"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="BTH-b3-QeB" kind="presentation" id="JZP-De-N5l"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VT-va-uzJ" customClass="circleButton" customModule="CoronAvoid" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VT-va-uzJ">
                                         <rect key="frame" x="306" y="0.0" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="iST-RK-mll"/>
@@ -121,25 +96,58 @@
                                         <state key="normal" image="hammer" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="24"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="W50-pX-WfL" kind="presentation" id="szu-uU-EMR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and you've spent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGm-t8-t7f">
+                                <rect key="frame" x="116" y="371" width="182.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="days at home." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lx7-tK-Yhk">
+                                <rect key="frame" x="131.5" y="505" width="151.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday, 15 April 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxS-CW-2eg">
+                                <rect key="frame" x="48.5" y="331" width="317.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDB-y2-qV2">
+                                <rect key="frame" x="168" y="411" width="78" height="84"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbi-q0-4pD">
+                                <rect key="frame" x="163" y="291" width="88" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.40392156862745099" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dQS-pP-dXE" firstAttribute="centerX" secondItem="EvJ-mU-1i0" secondAttribute="centerX" id="995-mO-1Wc"/>
+                            <constraint firstItem="YDB-y2-qV2" firstAttribute="top" secondItem="oGm-t8-t7f" secondAttribute="bottom" constant="10" id="JAW-3E-i52"/>
+                            <constraint firstItem="zbi-q0-4pD" firstAttribute="centerX" secondItem="YDB-y2-qV2" secondAttribute="centerX" id="LgH-l9-WKY"/>
+                            <constraint firstItem="pxS-CW-2eg" firstAttribute="centerX" secondItem="YDB-y2-qV2" secondAttribute="centerX" id="QLd-pc-kgs"/>
+                            <constraint firstItem="oGm-t8-t7f" firstAttribute="top" secondItem="pxS-CW-2eg" secondAttribute="bottom" constant="10" id="UwT-L8-b2R"/>
+                            <constraint firstItem="oGm-t8-t7f" firstAttribute="centerX" secondItem="YDB-y2-qV2" secondAttribute="centerX" id="auj-nt-24F"/>
                             <constraint firstItem="EvJ-mU-1i0" firstAttribute="bottom" secondItem="dQS-pP-dXE" secondAttribute="bottom" constant="70" id="bqH-Kd-N9W"/>
+                            <constraint firstItem="YDB-y2-qV2" firstAttribute="centerY" secondItem="EvJ-mU-1i0" secondAttribute="centerY" id="fcH-Zy-SkN"/>
+                            <constraint firstItem="pxS-CW-2eg" firstAttribute="top" secondItem="zbi-q0-4pD" secondAttribute="bottom" constant="10" id="slg-4O-DdS"/>
+                            <constraint firstItem="Lx7-tK-Yhk" firstAttribute="centerX" secondItem="YDB-y2-qV2" secondAttribute="centerX" id="tP5-y3-2ew"/>
+                            <constraint firstItem="YDB-y2-qV2" firstAttribute="centerX" secondItem="EvJ-mU-1i0" secondAttribute="centerX" id="tys-rD-7cK"/>
+                            <constraint firstItem="Lx7-tK-Yhk" firstAttribute="top" secondItem="YDB-y2-qV2" secondAttribute="bottom" constant="10" id="u5y-K2-gqa"/>
+                            <constraint firstItem="YDB-y2-qV2" firstAttribute="centerX" secondItem="Jau-qN-fV9" secondAttribute="centerX" id="yFy-Pk-Mx5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EvJ-mU-1i0"/>
                     </view>
@@ -147,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hca-Gm-h3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8.6956521739130448" y="-316.07142857142856"/>
+            <point key="canvasLocation" x="1052" y="-402"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="yV3-Ai-JUw">
@@ -180,14 +188,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rj9-iN-RMw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="YHZ-nB-DcF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-701" y="-316"/>
+            <point key="canvasLocation" x="9" y="-402"/>
         </scene>
         <!--Distance View Controller-->
         <scene sceneID="LWx-bI-LDI">
             <objects>
                 <viewController id="wEk-Jw-U0G" customClass="DistanceViewController" customModule="CoronAvoid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UWZ-qa-L40">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="oyu-CS-at0"/>
@@ -202,7 +210,7 @@
             <objects>
                 <viewController id="q2X-JX-OjI" customClass="LeaderboardViewController" customModule="CoronAvoid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tue-oz-sdb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="nI1-p7-sWa"/>
@@ -217,7 +225,7 @@
             <objects>
                 <viewController id="BTH-b3-QeB" customClass="ResourcesViewController" customModule="CoronAvoid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tkd-RH-bji">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Lay-o9-HML"/>
