@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03871B5D244944D3001D09A8 /* Asset 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 03871B5C244944D3001D09A8 /* Asset 1.png */; };
+		03871B6324494D78001D09A8 /* Asset 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 03871B6224494D78001D09A8 /* Asset 2.png */; };
 		03F5E0122447BA2C00D19E54 /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5E0112447BA2C00D19E54 /* DistanceViewController.swift */; };
 		03F5E0142447BA4800D19E54 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5E0132447BA4800D19E54 /* LeaderboardViewController.swift */; };
 		03F5E0162447BA7800D19E54 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5E0152447BA7700D19E54 /* ResourcesViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03871B5C244944D3001D09A8 /* Asset 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asset 1.png"; sourceTree = "<group>"; };
+		03871B6224494D78001D09A8 /* Asset 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asset 2.png"; sourceTree = "<group>"; };
 		03F5E0112447BA2C00D19E54 /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
 		03F5E0132447BA4800D19E54 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		03F5E0152447BA7700D19E54 /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				133F88DF24381A9600D501D8 /* LaunchScreen.storyboard */,
 				133F88E224381A9600D501D8 /* Info.plist */,
 				1335FE962441B0B4001DFA70 /* GoogleService-Info.plist */,
+				03871B5C244944D3001D09A8 /* Asset 1.png */,
+				03871B6224494D78001D09A8 /* Asset 2.png */,
 			);
 			path = CoronAvoid;
 			sourceTree = "<group>";
@@ -173,10 +179,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03871B6324494D78001D09A8 /* Asset 2.png in Resources */,
 				133F88E124381A9600D501D8 /* LaunchScreen.storyboard in Resources */,
 				1335FE972441B0B4001DFA70 /* GoogleService-Info.plist in Resources */,
 				133F88DE24381A9600D501D8 /* Assets.xcassets in Resources */,
 				133F88DC24381A9300D501D8 /* Main.storyboard in Resources */,
+				03871B5D244944D3001D09A8 /* Asset 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
