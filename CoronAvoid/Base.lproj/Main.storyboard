@@ -51,7 +51,7 @@
                                             <constraint firstAttribute="width" constant="70" id="iga-gk-lWZ"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="badge.plus.radiowaves.right" catalog="system" backgroundImage="Button Ring">
+                                        <state key="normal" image="badge.plus.radiowaves.right" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
                                         </state>
                                         <connections>
@@ -65,7 +65,7 @@
                                             <constraint firstAttribute="width" constant="70" id="o2n-46-eo5"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="list.number.rtl" catalog="system" backgroundImage="Button Ring">
+                                        <state key="normal" image="list.number.rtl" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
                                         </state>
                                         <connections>
@@ -79,7 +79,7 @@
                                             <constraint firstAttribute="height" constant="70" id="y5u-Kc-r6F"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="questionmark.diamond" catalog="system" backgroundImage="Button Ring">
+                                        <state key="normal" image="questionmark.diamond" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
                                         </state>
                                         <connections>
@@ -93,7 +93,7 @@
                                             <constraint firstAttribute="height" constant="70" id="sNq-e2-biU"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="hammer" catalog="system" backgroundImage="Button Ring">
+                                        <state key="normal" image="hammer" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
                                         </state>
                                         <connections>
@@ -216,7 +216,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="wyp-Xq-pGY"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="xmark.circle.fill" catalog="system" backgroundImage="Button Ring">
+                                <state key="normal" image="xmark.circle.fill" catalog="system">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large"/>
                                 </state>
@@ -295,7 +295,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Zlh-B8-kLj"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="xmark.circle.fill" catalog="system" backgroundImage="Button Ring">
+                                <state key="normal" image="xmark.circle.fill" catalog="system">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large"/>
                                 </state>
@@ -661,7 +661,6 @@
     </scenes>
     <resources>
         <image name="Beacon Ring" width="11740" height="11740"/>
-        <image name="Button Ring" width="1214" height="1214"/>
         <image name="CoronAvoid Logo-03 small" width="1000" height="1000"/>
         <image name="badge.plus.radiowaves.right" catalog="system" width="64" height="50"/>
         <image name="hammer" catalog="system" width="64" height="56"/>
