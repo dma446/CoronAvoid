@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let user = Auth.auth().currentUser
         
         if user?.uid != nil {
-            initialVC = storyboard.instantiateViewController(identifier: "TabBarController")
+            initialVC = storyboard.instantiateViewController(identifier: "HomeViewController")
         } else {
             initialVC = storyboard.instantiateViewController(identifier: "SignInViewController")
         }

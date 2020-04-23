@@ -21,7 +21,7 @@ class SignInViewController: UIViewController, GIDSignInDelegate {
     
     func signIn() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tabVC = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+        let tabVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
         self.view.window?.rootViewController = tabVC
         self.view.window?.makeKeyAndVisible()
     }
