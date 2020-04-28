@@ -1,15 +1,15 @@
 //
-//  ButtonCell.swift
+//  ButtonTableViewCell.swift
 //  CoronAvoid
 //
-//  Created by Joshua Zhong on 27/04/20.
+//  Created by Joshua Zhong on 28/04/20.
 //  Copyright © 2020 NYU. All rights reserved.
 //
 
 import UIKit
 
-class ButtonCell: UITableViewCell {
-    
+class ButtonTableViewCell: UITableViewCell {
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +20,5 @@ class ButtonCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }
