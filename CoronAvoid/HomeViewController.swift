@@ -22,11 +22,19 @@ class HomeViewController: UIViewController {
             //print("Hello, World!")
         }
         
+        //display current date
         let currentDate = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE, dd MMMM yyyy"
         let stringDate = formatter.string(from: currentDate)
         currentDateLabel.text = stringDate;
+        
+        //pull date from user database and display day streak
+        
+        
+        
+        
+        
     }
 
 

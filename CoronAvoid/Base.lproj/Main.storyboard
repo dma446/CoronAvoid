@@ -204,6 +204,9 @@
                                                 <constraint firstItem="Vpp-Cw-j1O" firstAttribute="centerX" secondItem="P0E-Jr-dB6" secondAttribute="centerX" id="hJu-E8-JQ0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="4PE-Hw-7sy" kind="show" id="wVj-0b-dmQ"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ier-Aq-HBV">
                                         <rect key="frame" x="20" y="198.5" width="374" height="43.5"/>
@@ -300,12 +303,18 @@
                     <navigationItem key="navigationItem" title="Manual Date Input" id="7Cl-Zk-ReR">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="g4t-UM-2wJ">
                             <color key="tintColor" red="1" green="0.4039215686" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="UUR-dX-kfv" id="ZWr-Kg-u2C"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="newDate" destination="9mC-19-whj" id="h2c-1u-cRq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3C-Nf-dVO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2967" y="1092"/>
+            <point key="canvasLocation" x="1755" y="1823"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Eno-bE-kbG">
@@ -461,9 +470,6 @@
                                     <constraint firstAttribute="height" constant="138" id="6DN-Me-Yjy"/>
                                     <constraint firstAttribute="width" constant="201" id="skL-kj-2uc"/>
                                 </constraints>
-                                <connections>
-                                    <action selector="googleSignInBtnPressed:" destination="YHZ-nB-DcF" eventType="valueChanged" id="uIJ-Mh-WbH"/>
-                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -479,7 +485,6 @@
                     <navigationItem key="navigationItem" id="fv4-hQ-tC2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rj9-iN-RMw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="YHZ-nB-DcF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="9" y="-402"/>
         </scene>
@@ -522,8 +527,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn off after you wash your hands" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjQ-Nv-ZY1">
-                                <rect key="frame" x="59" y="612" width="296" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <rect key="frame" x="74" y="612" width="266" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -541,6 +546,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FbV-fP-leT">
                                 <rect key="frame" x="182.5" y="388.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="radarSwitchFlipped:" destination="wEk-Jw-U0G" eventType="valueChanged" id="1u4-oL-abn"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.4039215686" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -807,6 +815,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K0h-Ty-5m5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2119" y="394"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lhI-Nt-rjd">
+            <objects>
+                <viewController id="4PE-Hw-7sy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GqC-Ft-Wjz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Osk-pj-CU1">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Need to figure out how to set geofence settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsB-Dg-z3X">
+                                <rect key="frame" x="25" y="307" width="365" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="save in settings.bundle not database" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTN-b2-DUU">
+                                <rect key="frame" x="20" y="369" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="B3o-va-cuq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="orU-ac-GDQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8b-o0-zcn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2478" y="1823"/>
         </scene>
     </scenes>
     <resources>

@@ -6,18 +6,29 @@
 //  Copyright © 2020 NYU. All rights reserved.
 //
 
+
+// not working yet
+
 import UIKit
 
 class DateEntryViewController: UIViewController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        //push new date to user account in database
+        
+        
+        
+        
+        
+        
+    }
+    
     /*
     // MARK: - Navigation
 

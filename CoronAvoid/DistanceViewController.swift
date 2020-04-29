@@ -17,9 +17,17 @@ class DistanceViewController: UIViewController {
     }
     
     @IBAction func closeVC(_ sender: Any) {
-        [self .dismiss(animated: true, completion: nil)]
+        self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func radarSwitchFlipped(_ sender: Any) {
+        //push current date to database user profile
+        
+        
+        //start background processes here
+        
+        
+    }
     /*
     // MARK: - Navigation
 
