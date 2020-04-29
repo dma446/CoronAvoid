@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResourcesViewController: UIViewController {
+class ResourcesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +16,14 @@ class ResourcesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func closeButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("row \(indexPath) tapped")
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
     /*
     // MARK: - Navigation

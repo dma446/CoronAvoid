@@ -10,10 +10,25 @@ import UIKit
 import FirebaseAuth
 import GoogleSignIn
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func closeButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("row \(indexPath) tapped")
+        
+        if (indexPath[0]==2 && indexPath[1]==0) {
+            signOutBtnPressed()
+        }
+        
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     func signOut() {
@@ -23,7 +38,7 @@ class SettingsViewController: UIViewController {
         self.view.window?.makeKeyAndVisible()
     }
     
-    @IBAction func signOutBtnPressed(_ sender: Any) {
+    func signOutBtnPressed() {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
