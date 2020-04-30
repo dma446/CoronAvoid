@@ -2,17 +2,21 @@
 //  SignInViewController.swift
 //  CoronAvoid
 //
-//  Created 4/11/20.
+//  Created by David Acheampong on 04/11/20.
 //  Copyright © 2020 NYU. All rights reserved.
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
 import GoogleSignIn
 
 class SignInViewController: UIViewController, GIDSignInDelegate {
     @IBOutlet weak var googleSignInButton: GIDSignInButton!
     
+    var db: Firestore!
+    var nextVC:UIViewController?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance()?.presentingViewController = self
@@ -21,9 +25,22 @@ class SignInViewController: UIViewController, GIDSignInDelegate {
     
     func signIn() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tabVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
-        self.view.window?.rootViewController = tabVC
-        self.view.window?.makeKeyAndVisible()
+        
+        let user = Auth.auth().currentUser!
+        db = Firestore.firestore()
+        let userRef = db.document("users/\(user.email!)")
+        
+        userRef.getDocument {(document, error) in
+            if let document = document, document.exists {
+                self.nextVC = storyboard.instantiateViewController(identifier: "HomeViewController")
+            } else {
+                self.nextVC = storyboard.instantiateViewController(identifier: "UsernameViewController")
+                //usernameVC.prevVC = self
+               // self.nextVC = usernameVC
+            }
+            self.view.window?.rootViewController = self.nextVC
+            self.view.window?.makeKeyAndVisible()
+        }
     }
 
     @IBAction func googleSignInBtnPressed(_ sender: Any) {

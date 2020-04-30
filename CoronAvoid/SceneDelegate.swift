@@ -2,35 +2,53 @@
 //  SceneDelegate.swift
 //  CoronAvoid
 //
-//  Created 4/3/20.
+//  Created by David Acheampong on 04/03/20.
 //  Copyright © 2020 NYU. All rights reserved.
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var db:Firestore!
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    
+   
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        var initialVC: UIViewController
         let user = Auth.auth().currentUser
+        self.db = Firestore.firestore()
         
+        //Add if user exists method
         if user?.uid != nil {
-            initialVC = storyboard.instantiateViewController(identifier: "HomeViewController")
+            let userRef = self.db.document("users/\(user!.email!)")
+            userRef.getDocument {(document, error) in
+                if let document = document, document.exists {
+                    self.window?.rootViewController = self.storyboard.instantiateViewController(identifier: "HomeViewController")
+                    self.window?.makeKeyAndVisible()
+                } else {
+                    let firebaseAuth = Auth.auth()
+                    do {
+                        try firebaseAuth.signOut()
+                    } catch let signOutError as NSError {
+                        print("Sign Out Error: %@", signOutError)
+                    }
+                    self.window?.rootViewController = self.storyboard.instantiateViewController(identifier: "SignInViewController")
+                    self.window?.makeKeyAndVisible()
+                }
+            }
         } else {
-            initialVC = storyboard.instantiateViewController(identifier: "SignInViewController")
+            window?.rootViewController = self.storyboard.instantiateViewController(identifier: "SignInViewController")
+            window?.makeKeyAndVisible()
         }
         
-        window?.rootViewController = initialVC
-        window?.makeKeyAndVisible()
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

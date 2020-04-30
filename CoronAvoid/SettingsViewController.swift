@@ -23,7 +23,7 @@ class SettingsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("row \(indexPath) tapped")
         
-        if (indexPath[0]==2 && indexPath[1]==0) {
+        if (indexPath[0]==2 && indexPath[1]==1) {
             let signOutWarning = UIAlertController(title: "Sign out?", message: "Are you sure you'd like to sign out?", preferredStyle: .actionSheet)
             
             let signOutOK = UIAlertAction(title: "Yes, sign me out", style: .default, handler: {(action)->Void in
