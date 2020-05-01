@@ -2,8 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>CoronAvoid requests your permission to access Bluetooth in order to give you proximity alerts.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>CoronAvoid requests your permission to access your location in order to give you proximity alerts.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string></string>
+	<string>CoronAvoid requests your permission to access your location in order to give you proximity alerts.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
