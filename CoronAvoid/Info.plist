@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>CoronAvoid requests your permission to access your location in order to give you proximity alerts.</string>
+	<string>CoronAvoid requests your permission to access Bluetooth in order to give you proximity alerts.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>CoronAvoid requests your permission to access your location in order to give you proximity alerts.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>

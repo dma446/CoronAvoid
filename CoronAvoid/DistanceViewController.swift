@@ -59,7 +59,7 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
         locationManager.delegate = self
         peripheral = CBPeripheralManager()
         peripheral.delegate = self
-        power = NSNumber(integerLiteral: 25)
+        power = NSNumber(integerLiteral: 20)
         
         Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(onTimer), userInfo: nil, repeats: true)
         
