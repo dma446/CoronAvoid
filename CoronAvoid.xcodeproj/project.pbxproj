@@ -11,7 +11,6 @@
 		03009419245949890014AEF1 /* DateEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03009418245949890014AEF1 /* DateEntryViewController.swift */; };
 		03871B5D244944D3001D09A8 /* Asset 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 03871B5C244944D3001D09A8 /* Asset 1.png */; };
 		03871B6324494D78001D09A8 /* Asset 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 03871B6224494D78001D09A8 /* Asset 2.png */; };
-		03978108245BE4880089F86B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03978107245BE4880089F86B /* GoogleService-Info.plist */; };
 		03F5E0122447BA2C00D19E54 /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5E0112447BA2C00D19E54 /* DistanceViewController.swift */; };
 		03F5E0142447BA4800D19E54 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5E0132447BA4800D19E54 /* LeaderboardViewController.swift */; };
 		03F5E0162447BA7800D19E54 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5E0152447BA7700D19E54 /* ResourcesViewController.swift */; };
@@ -24,6 +23,7 @@
 		133F88E124381A9600D501D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133F88DF24381A9600D501D8 /* LaunchScreen.storyboard */; };
 		13D9B6C5245A8D6200111A77 /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9B6C4245A8D6100111A77 /* UsernameViewController.swift */; };
 		13EEF942244368AD009A1C51 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EEF941244368AD009A1C51 /* SettingsViewController.swift */; };
+		7B388BBD245CC977002889C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B388BBC245CC977002889C7 /* GoogleService-Info.plist */; };
 		90027DFD6FE207E53DE975E6 /* Pods_CoronAvoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55A8A3801D97140B5DB9A5F /* Pods_CoronAvoid.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +32,6 @@
 		03009418245949890014AEF1 /* DateEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEntryViewController.swift; sourceTree = "<group>"; };
 		03871B5C244944D3001D09A8 /* Asset 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asset 1.png"; sourceTree = "<group>"; };
 		03871B6224494D78001D09A8 /* Asset 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asset 2.png"; sourceTree = "<group>"; };
-		03978107245BE4880089F86B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03F5E0112447BA2C00D19E54 /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
 		03F5E0132447BA4800D19E54 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		03F5E0152447BA7700D19E54 /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		13D9B6C4245A8D6100111A77 /* UsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
 		13EEF941244368AD009A1C51 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		61E583446AD9BCDD4F605E16 /* Pods-CoronAvoid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronAvoid.debug.xcconfig"; path = "Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid.debug.xcconfig"; sourceTree = "<group>"; };
+		7B388BBC245CC977002889C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D55A8A3801D97140B5DB9A5F /* Pods_CoronAvoid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronAvoid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18518F74603922537E33E2A /* Pods-CoronAvoid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronAvoid.release.xcconfig"; path = "Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,7 +107,7 @@
 				133F88DD24381A9600D501D8 /* Assets.xcassets */,
 				133F88DF24381A9600D501D8 /* LaunchScreen.storyboard */,
 				133F88E224381A9600D501D8 /* Info.plist */,
-				03978107245BE4880089F86B /* GoogleService-Info.plist */,
+				7B388BBC245CC977002889C7 /* GoogleService-Info.plist */,
 				03871B5C244944D3001D09A8 /* Asset 1.png */,
 				03871B6224494D78001D09A8 /* Asset 2.png */,
 				0300940E24574C1C0014AEF1 /* Settings.bundle */,
@@ -191,7 +191,7 @@
 				133F88DC24381A9300D501D8 /* Main.storyboard in Resources */,
 				03871B5D244944D3001D09A8 /* Asset 1.png in Resources */,
 				0300940F24574C1C0014AEF1 /* Settings.bundle in Resources */,
-				03978108245BE4880089F86B /* GoogleService-Info.plist in Resources */,
+				7B388BBD245CC977002889C7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

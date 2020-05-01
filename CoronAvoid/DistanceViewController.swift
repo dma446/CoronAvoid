@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreLocation
+import CoreBluetooth
+import AudioToolbox
 
-class DistanceViewController: UIViewController {
+class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPeripheralManagerDelegate {
 
     @IBOutlet weak var beaconSwitch: UISwitch!
     
@@ -24,18 +27,45 @@ class DistanceViewController: UIViewController {
     var radarImage:UIImage?
     var isAnimating:Bool?
     
+    var locationManager: CLLocationManager!
+    var peripheral : CBPeripheralManager!
+    
+    var uuid : UUID!
+    var major : CLBeaconMajorValue!
+    var minor : CLBeaconMinorValue!
+    var power : NSNumber!
+    let beaconID = "com.CoronAvoid"
+    
+    func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
+        switch peripheral.state{
+            case .poweredOff:
+                locationManager.stopRangingBeacons(satisfying: CLBeaconIdentityConstraint(uuid: uuid, major: major, minor: minor))
+            case .poweredOn:
+                let myRegion = createBeaconRegion()!
+                advertiseDevice(regiion: myRegion)
+                locationManager.startRangingBeacons(satisfying: CLBeaconIdentityConstraint(uuid: uuid, major: major, minor: minor))
+            default:
+                locationManager.requestAlwaysAuthorization()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        if beaconSwitch.isOn {
-            isAnimating = true
-        }
-        else if !beaconSwitch.isOn {
-            isAnimating = false
-        }
+        isAnimating = false
+        beaconSwitch.setOn(false, animated: false)
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        peripheral = CBPeripheralManager()
+        peripheral.delegate = self
+        power = NSNumber(integerLiteral: 25)
         
         Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(onTimer), userInfo: nil, repeats: true)
+        
+        uuid = UUID(uuidString: "7959A986-DC83-413A-B22E-EBE8B3606B42")
+        major = 100
+        minor = 1
     }
     
     @IBAction func closeVC(_ sender: Any) {
@@ -45,13 +75,19 @@ class DistanceViewController: UIViewController {
     @IBAction func beaconSwitchFlipped(_ sender: Any) {
         if beaconSwitch.isOn {
             isAnimating = true
-            
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            locationManager.requestAlwaysAuthorization()
             // on for testing
-            self.appDelegate?.sendNotification()
+            //self.appDelegate?.sendNotification()
         }
         else {
             isAnimating = false
-        }
+            if(peripheral.isAdvertising){
+                peripheral.stopAdvertising()
+            }
+            locationManager.stopRangingBeacons(satisfying: CLBeaconIdentityConstraint(uuid: uuid, major: major, minor: minor))
+                
+            }
     }
     
     
@@ -72,6 +108,43 @@ class DistanceViewController: UIViewController {
             }
         }
     }
+    
+    func createBeaconRegion() -> CLBeaconRegion?{
+        return CLBeaconRegion(proximityUUID: uuid, major: major, identifier: minor)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status:CLAuthorizationStatus){
+        if status == .authorizedAlways{
+            if(CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self)){
+                if(CLLocationManager.isRangingAvailable()){
+                    startScanning()
+                }
+            }
+        }
+    }
+    
+    func startScanning(){
+        let beaconRegion = createBeaconRegion()
+        locationManager.startMonitoring(for: beaconRegion)
+        locationManager.startRangingBeacons(in: beaconRegion)
+    }
+    
+    func locationManger(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion){
+        if beacons.count > 0{
+            let nearestBeacon = beacons.first!
+            while(nearestBeacon.proximity == CLProximity.immediate){
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            }
+        }
+    }
+    
+    func advertiseDevice(region: CLBeaconRegion){
+        let peripheralData = region.peripheralData(withMeasuredPower: power)
+        
+        peripheral.startAdvertising(((peripheralData as NSDictionary) as! [String : Any]))
+    }
+    
+    
     /*
     // MARK: - Navigation
 
