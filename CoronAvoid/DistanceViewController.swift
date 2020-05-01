@@ -45,6 +45,8 @@ class DistanceViewController: UIViewController {
     @IBAction func beaconSwitchFlipped(_ sender: Any) {
         if beaconSwitch.isOn {
             isAnimating = true
+            
+            // on for testing
             self.appDelegate?.sendNotification()
         }
         else {

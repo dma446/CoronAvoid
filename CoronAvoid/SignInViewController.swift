@@ -12,6 +12,7 @@ import FirebaseAuth
 import GoogleSignIn
 
 class SignInViewController: UIViewController, GIDSignInDelegate {
+    
     @IBOutlet weak var googleSignInButton: GIDSignInButton!
     
     var db: Firestore!

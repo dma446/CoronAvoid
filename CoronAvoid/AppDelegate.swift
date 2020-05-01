@@ -19,10 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
-        //Initialize sign-in
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        
         //notifications
         notificationCenter.delegate = self
         
@@ -33,6 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("User has declined notifications")
             }
         }
+        
+        FirebaseApp.configure()
+        //Initialize sign-in
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        
         return true
     }
 
