@@ -20,7 +20,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let user = Auth.auth().currentUser!
 //        if user?.uid == nil {
 //            //print("Ah, man!")
 //        } else {
@@ -34,25 +33,27 @@ class HomeViewController: UIViewController {
         let stringDate = formatter.string(from: currentDate)
         currentDateLabel.text = stringDate;
         
+        }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let user = Auth.auth().currentUser!
         //pull date from user database and display day streak
         self.db = Firestore.firestore()
         let userRef = self.db.document("users/\(user.email!)")
-//        let lastTimeStamp: Timestamp?
+        //        let lastTimeStamp: Timestamp?
         userRef.getDocument { (doc, err) in
             if let doc = doc, doc.exists {
                 let lastTimeStamp = doc.get("dateLastLeft") as? Timestamp
-                    print("date received")
+                print("date received")
                 let lastDate: Date = lastTimeStamp?.dateValue() ?? Date()
                 let streakDays = Date().homeOffset(from: lastDate)
                 self.streakNum.text = streakDays.0
                 self.streakUnit.text = streakDays.1
-                } else {
-                    print("date not found")
-                }
+            } else {
+                print("date not found")
             }
-            
-        
         }
+    }
 
 
 }

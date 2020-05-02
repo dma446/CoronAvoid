@@ -10,8 +10,13 @@ import UIKit
 import CoreLocation
 import CoreBluetooth
 import AudioToolbox
+import FirebaseAuth
+import GoogleSignIn
+import Firebase
 
 class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPeripheralManagerDelegate {
+    
+    var db: Firestore!
 
     @IBOutlet weak var beaconSwitch: UISwitch!
     
@@ -78,6 +83,21 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
             isAnimating = true
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             locationManager.requestAlwaysAuthorization()
+            
+            // update db timestamp
+            let newDate = Date()
+            
+            let user = Auth.auth().currentUser!
+            self.db = Firestore.firestore()
+            let userRef = self.db.document("users/\(user.email!)")
+            userRef.updateData(["dateLastLeft": Timestamp(date: newDate)]) {
+                (err) in
+                if let err = err {
+                    print("error, date not updated: \(err.localizedDescription)")
+                } else {
+                    print("date updated successfully")
+                }
+            }
             
             // on for testing
             //self.appDelegate?.sendNotification()
