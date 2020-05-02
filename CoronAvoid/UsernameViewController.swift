@@ -58,7 +58,7 @@ class UsernameViewController: UIViewController {
                         }
                     } else {
                         //If User doesn't exists, create new user
-                        let userData: [String: Any] = ["username": usernameEntered, "timeHome":0]
+                        let userData: [String: Any] = ["username": usernameEntered, "dateBeganStayingHome":Date()]
                         userRef.setData(userData) {
                             (err) in
                             if let err = err {

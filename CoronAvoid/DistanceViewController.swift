@@ -78,6 +78,7 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
             isAnimating = true
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             locationManager.requestAlwaysAuthorization()
+            
             // on for testing
             //self.appDelegate?.sendNotification()
         }
