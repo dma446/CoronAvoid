@@ -24,7 +24,7 @@
 		13D9B6C5245A8D6200111A77 /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9B6C4245A8D6100111A77 /* UsernameViewController.swift */; };
 		13EEF942244368AD009A1C51 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EEF941244368AD009A1C51 /* SettingsViewController.swift */; };
 		7B388BBD245CC977002889C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B388BBC245CC977002889C7 /* GoogleService-Info.plist */; };
-		90027DFD6FE207E53DE975E6 /* Pods_CoronAvoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55A8A3801D97140B5DB9A5F /* Pods_CoronAvoid.framework */; };
+		BC5AF7BC6BD735CDCA71374A /* Pods_CoronAvoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF2C10D1ACEE652CAF5E38 /* Pods_CoronAvoid.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,10 +46,10 @@
 		133F88E224381A9600D501D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13D9B6C4245A8D6100111A77 /* UsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
 		13EEF941244368AD009A1C51 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		61E583446AD9BCDD4F605E16 /* Pods-CoronAvoid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronAvoid.debug.xcconfig"; path = "Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid.debug.xcconfig"; sourceTree = "<group>"; };
+		4ECA326B26A04F238E860ABA /* Pods-CoronAvoid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronAvoid.release.xcconfig"; path = "Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid.release.xcconfig"; sourceTree = "<group>"; };
+		6847B50A0EBED6EAB84669C5 /* Pods-CoronAvoid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronAvoid.debug.xcconfig"; path = "Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid.debug.xcconfig"; sourceTree = "<group>"; };
 		7B388BBC245CC977002889C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D55A8A3801D97140B5DB9A5F /* Pods_CoronAvoid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronAvoid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E18518F74603922537E33E2A /* Pods-CoronAvoid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronAvoid.release.xcconfig"; path = "Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid.release.xcconfig"; sourceTree = "<group>"; };
+		C6FF2C10D1ACEE652CAF5E38 /* Pods_CoronAvoid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronAvoid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,17 +57,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90027DFD6FE207E53DE975E6 /* Pods_CoronAvoid.framework in Frameworks */,
+				BC5AF7BC6BD735CDCA71374A /* Pods_CoronAvoid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		121706C77A8582B7ADA212E8 /* Frameworks */ = {
+		011EE9213E55B42EC27A5175 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D55A8A3801D97140B5DB9A5F /* Pods_CoronAvoid.framework */,
+				C6FF2C10D1ACEE652CAF5E38 /* Pods_CoronAvoid.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -78,7 +78,7 @@
 				133F88D324381A9300D501D8 /* CoronAvoid */,
 				133F88D224381A9300D501D8 /* Products */,
 				FC0D2FB115941DF56DF4A045 /* Pods */,
-				121706C77A8582B7ADA212E8 /* Frameworks */,
+				011EE9213E55B42EC27A5175 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,8 +118,8 @@
 		FC0D2FB115941DF56DF4A045 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				61E583446AD9BCDD4F605E16 /* Pods-CoronAvoid.debug.xcconfig */,
-				E18518F74603922537E33E2A /* Pods-CoronAvoid.release.xcconfig */,
+				6847B50A0EBED6EAB84669C5 /* Pods-CoronAvoid.debug.xcconfig */,
+				4ECA326B26A04F238E860ABA /* Pods-CoronAvoid.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -131,12 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 133F88E524381A9600D501D8 /* Build configuration list for PBXNativeTarget "CoronAvoid" */;
 			buildPhases = (
-				7BF420E25FB9FF66698D1EA3 /* [CP] Check Pods Manifest.lock */,
+				FB40F495ABD6C707A1E72B9B /* [CP] Check Pods Manifest.lock */,
 				133F88CD24381A9300D501D8 /* Sources */,
 				133F88CE24381A9300D501D8 /* Frameworks */,
 				133F88CF24381A9300D501D8 /* Resources */,
-				B0AC6C9D3A7DB2F1CF7858F1 /* [CP] Embed Pods Frameworks */,
-				CD22A8627EB2E2E7319AD841 /* [CP] Copy Pods Resources */,
+				38F0F35007C8906F3CE4B261 /* [CP] Embed Pods Frameworks */,
+				74E64B46EF6CB3DF49F910AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,7 +198,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7BF420E25FB9FF66698D1EA3 /* [CP] Check Pods Manifest.lock */ = {
+		38F0F35007C8906F3CE4B261 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74E64B46EF6CB3DF49F910AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB40F495ABD6C707A1E72B9B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -218,40 +252,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B0AC6C9D3A7DB2F1CF7858F1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CD22A8627EB2E2E7319AD841 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoronAvoid/Pods-CoronAvoid-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -412,7 +412,7 @@
 		};
 		133F88E624381A9600D501D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61E583446AD9BCDD4F605E16 /* Pods-CoronAvoid.debug.xcconfig */;
+			baseConfigurationReference = 6847B50A0EBED6EAB84669C5 /* Pods-CoronAvoid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -434,7 +434,7 @@
 		};
 		133F88E724381A9600D501D8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E18518F74603922537E33E2A /* Pods-CoronAvoid.release.xcconfig */;
+			baseConfigurationReference = 4ECA326B26A04F238E860ABA /* Pods-CoronAvoid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";

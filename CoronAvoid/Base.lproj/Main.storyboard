@@ -249,7 +249,7 @@
             </objects>
             <point key="canvasLocation" x="2118.840579710145" y="1091.5178571428571"/>
         </scene>
-        <!--Username-->
+        <!--Create New Username-->
         <scene sceneID="ylg-gp-lfJ">
             <objects>
                 <viewController id="ulf-9K-QOr" customClass="UsernameViewController" customModule="CoronAvoid" customModuleProvider="target" sceneMemberID="viewController">
@@ -257,27 +257,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter a username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJj-Ix-5LS">
-                                <rect key="frame" x="132" y="198" width="152" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a new username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJj-Ix-5LS">
+                                <rect key="frame" x="111" y="221" width="192" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.4039215686" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="uwx-1d-CMZ">
-                                <rect key="frame" x="20" y="284" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="uwx-1d-CMZ">
+                                <rect key="frame" x="57" y="251" width="300" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="FHo-Cj-rmR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
-                                <connections>
-                                    <action selector="returnUsernameWithSender:" destination="ulf-9K-QOr" eventType="primaryActionTriggered" id="mRQ-A3-qcd"/>
-                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uwx-1d-CMZ" firstAttribute="centerX" secondItem="zsN-RQ-pJi" secondAttribute="centerX" id="H0T-Wx-E5B"/>
+                            <constraint firstItem="aJj-Ix-5LS" firstAttribute="centerX" secondItem="zsN-RQ-pJi" secondAttribute="centerX" id="a0c-0L-FsQ"/>
+                            <constraint firstItem="uwx-1d-CMZ" firstAttribute="top" secondItem="aJj-Ix-5LS" secondAttribute="bottom" constant="8" id="e1L-XD-kW6"/>
+                            <constraint firstItem="aJj-Ix-5LS" firstAttribute="centerY" secondItem="zsN-RQ-pJi" secondAttribute="centerY" constant="-200" id="tj5-qL-eoW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zsN-RQ-pJi"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Username" id="VeG-j4-uhO"/>
+                    <navigationItem key="navigationItem" title="Create New Username" id="VeG-j4-uhO">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Adt-PY-7ch">
+                            <connections>
+                                <action selector="returnUsernameWithSender:" destination="ulf-9K-QOr" id="nJO-RI-S4M"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="usernameTextField" destination="uwx-1d-CMZ" id="lCP-qb-XUR"/>
                     </connections>
@@ -294,21 +304,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="9mC-19-whj">
-                                <rect key="frame" x="47" y="324" width="320" height="216"/>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When was the last time you were out?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCA-FU-wUs">
-                                <rect key="frame" x="44.5" y="205.5" width="325" height="21.5"/>
+                                <rect key="frame" x="44.5" y="221.5" width="325" height="21.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.4039215686" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="9mC-19-whj">
+                                <rect key="frame" x="47" y="251" width="320" height="216"/>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="GCA-FU-wUs" firstAttribute="centerY" secondItem="9zT-1O-RMv" secondAttribute="centerY" multiplier="0.5" id="QLu-jZ-GqD"/>
+                            <constraint firstItem="9mC-19-whj" firstAttribute="top" secondItem="GCA-FU-wUs" secondAttribute="bottom" constant="8" id="OLA-tX-3iL"/>
+                            <constraint firstItem="GCA-FU-wUs" firstAttribute="centerY" secondItem="9zT-1O-RMv" secondAttribute="centerY" constant="-200" id="QLu-jZ-GqD"/>
                             <constraint firstItem="GCA-FU-wUs" firstAttribute="centerX" secondItem="9zT-1O-RMv" secondAttribute="centerX" id="ikJ-Uj-90V"/>
-                            <constraint firstItem="9mC-19-whj" firstAttribute="centerY" secondItem="9zT-1O-RMv" secondAttribute="centerY" id="rMj-RP-uu5"/>
                             <constraint firstItem="9mC-19-whj" firstAttribute="centerX" secondItem="9zT-1O-RMv" secondAttribute="centerX" id="vxQ-5v-IWk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9zT-1O-RMv"/>
@@ -549,31 +559,31 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Going outside?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEc-il-yuc">
-                                <rect key="frame" x="115" y="131" width="184" height="30"/>
+                                <rect key="frame" x="115" y="128.5" width="184" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn off after you wash your hands" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjQ-Nv-ZY1">
-                                <rect key="frame" x="74" y="608" width="266" height="20.5"/>
+                                <rect key="frame" x="74" y="614.5" width="266" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn on the switch and put phone in pocket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIA-OJ-Vkx">
-                                <rect key="frame" x="41.5" y="171.5" width="331" height="20.5"/>
+                                <rect key="frame" x="41.5" y="163" width="331" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You'll be alerted if you're too close to others" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crW-sl-XmC">
-                                <rect key="frame" x="32.5" y="639" width="349.5" height="19.5"/>
+                                <rect key="frame" x="32.5" y="639.5" width="349.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FbV-fP-leT">
-                                <rect key="frame" x="182.5" y="384.5" width="51" height="31"/>
+                                <rect key="frame" x="182.5" y="408.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="beaconSwitchFlipped:" destination="wEk-Jw-U0G" eventType="valueChanged" id="7uH-ve-vnb"/>
                                 </connections>
@@ -583,14 +593,14 @@
                         <constraints>
                             <constraint firstItem="PEc-il-yuc" firstAttribute="centerX" secondItem="oyu-CS-at0" secondAttribute="centerX" id="5u5-L3-7vF"/>
                             <constraint firstItem="oyu-CS-at0" firstAttribute="bottom" secondItem="waD-qk-HcO" secondAttribute="bottom" constant="50" id="5zl-zq-Gug"/>
-                            <constraint firstItem="FbV-fP-leT" firstAttribute="top" secondItem="aIA-OJ-Vkx" secondAttribute="bottom" constant="192.5" id="Bfw-e4-tl8"/>
+                            <constraint firstItem="FbV-fP-leT" firstAttribute="top" secondItem="aIA-OJ-Vkx" secondAttribute="bottom" constant="225" id="Bfw-e4-tl8"/>
                             <constraint firstItem="FbV-fP-leT" firstAttribute="centerX" secondItem="oyu-CS-at0" secondAttribute="centerX" id="FDu-Ny-V6t"/>
-                            <constraint firstItem="crW-sl-XmC" firstAttribute="top" secondItem="FbV-fP-leT" secondAttribute="bottom" constant="223.5" id="FWZ-UJ-of1"/>
+                            <constraint firstItem="crW-sl-XmC" firstAttribute="top" secondItem="FbV-fP-leT" secondAttribute="bottom" constant="200" id="FWZ-UJ-of1"/>
                             <constraint firstItem="waD-qk-HcO" firstAttribute="centerX" secondItem="oyu-CS-at0" secondAttribute="centerX" id="OUr-wM-zI8"/>
-                            <constraint firstItem="CjQ-Nv-ZY1" firstAttribute="top" secondItem="FbV-fP-leT" secondAttribute="bottom" constant="192.5" id="QAw-VS-Cm8"/>
+                            <constraint firstItem="CjQ-Nv-ZY1" firstAttribute="top" secondItem="FbV-fP-leT" secondAttribute="bottom" constant="175" id="QAw-VS-Cm8"/>
                             <constraint firstItem="aIA-OJ-Vkx" firstAttribute="centerX" secondItem="oyu-CS-at0" secondAttribute="centerX" id="V8q-MG-nOh"/>
-                            <constraint firstItem="FbV-fP-leT" firstAttribute="top" secondItem="PEc-il-yuc" secondAttribute="bottom" constant="223.5" id="e8Q-Se-kgW"/>
-                            <constraint firstItem="FbV-fP-leT" firstAttribute="centerY" secondItem="oyu-CS-at0" secondAttribute="centerY" multiplier="0.99" id="m13-L6-Hi9"/>
+                            <constraint firstItem="FbV-fP-leT" firstAttribute="top" secondItem="PEc-il-yuc" secondAttribute="bottom" constant="250" id="e8Q-Se-kgW"/>
+                            <constraint firstItem="FbV-fP-leT" firstAttribute="centerY" secondItem="oyu-CS-at0" secondAttribute="centerY" multiplier="1.05" id="m13-L6-Hi9"/>
                             <constraint firstItem="CjQ-Nv-ZY1" firstAttribute="centerX" secondItem="oyu-CS-at0" secondAttribute="centerX" id="myZ-Il-QPU"/>
                             <constraint firstItem="crW-sl-XmC" firstAttribute="centerX" secondItem="oyu-CS-at0" secondAttribute="centerX" id="zuN-xV-6VV"/>
                         </constraints>

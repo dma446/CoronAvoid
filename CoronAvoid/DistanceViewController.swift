@@ -18,10 +18,10 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
     public var screenWidth: CGFloat {
-        return UIScreen.main.bounds.width
+        return self.view.frame.size.width
     }
     public var screenHeight: CGFloat {
-        return UIScreen.main.bounds.height
+        return self.view.frame.size.height
     }
     
     var radarImage:UIImage?
@@ -42,7 +42,7 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
                 locationManager.stopRangingBeacons(satisfying: CLBeaconIdentityConstraint(uuid: uuid, major: major, minor: minor))
             case .poweredOn:
                 let myRegion = createBeaconRegion()!
-                advertiseDevice(regiion: myRegion)
+                advertiseDevice(region: myRegion)
                 locationManager.startRangingBeacons(satisfying: CLBeaconIdentityConstraint(uuid: uuid, major: major, minor: minor))
             default:
                 locationManager.requestAlwaysAuthorization()
@@ -97,7 +97,7 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
             let radarImage = UIImage(named: "Beacon Ring")
             let radarImageView = UIImageView(image: radarImage)
             radarImageView.frame = CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)
-            radarImageView.center = self.view.center
+            radarImageView.center = CGPoint(x: (screenWidth/2), y: (screenHeight/2))
             radarImageView.alpha = 1.0
             self.view.addSubview(radarImageView)
             self.view.sendSubviewToBack(radarImageView)
@@ -127,10 +127,10 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
     func startScanning(){
         let beaconRegion = createBeaconRegion()!
         locationManager.startMonitoring(for: beaconRegion)
-        locationManager.startRangingBeacons(satisfying: CLBeaconIdentityConstraint(uuid, major, minor))
+        locationManager.startRangingBeacons(satisfying: CLBeaconIdentityConstraint(uuid: uuid, major: major, minor: minor))
     }
     
-    func locationManger(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion){
+    func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion){
         if beacons.count > 0{
             let nearestBeacon = beacons.first!
             while(nearestBeacon.proximity == CLProximity.immediate){

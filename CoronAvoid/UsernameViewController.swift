@@ -43,36 +43,37 @@ class UsernameViewController: UIViewController {
         //Checks if username is taken
         self.db.collection("users").whereField("username", isEqualTo:usernameEntered).getDocuments {
               (docs, err) in
-                  if let docs = docs, docs.isEmpty {//Username is free to use
-                    //Checks if user already exists
-                    userRef.getDocument {(document, error) in
-                        if let document = document, document.exists {
-                            userRef.updateData(["username": usernameEntered]) {
-                                (err) in
-                                    if let err = err {
-                                        print("Oh noes!: \(err.localizedDescription)")
-                                    } else {
-                                        self.dismiss(animated: true, completion: nil)
-                                        }
-                                    }
-                  } else {
+            if let docs = docs, docs.isEmpty
+            {//Username is free to use
+                //Checks if user already exists
+                userRef.getDocument {(document, error) in
+                    if let document = document, document.exists {
+                        userRef.updateData(["username": usernameEntered]) {
+                            (err) in
+                            if let err = err {
+                                print("Oh noes!: \(err.localizedDescription)")
+                            } else {
+                                self.dismiss(animated: true, completion: nil)
+                            }
+                        }
+                    } else {
                         //If User doesn't exists, create new user
                         let userData: [String: Any] = ["username": usernameEntered, "timeHome":0]
                         userRef.setData(userData) {
                             (err) in
-                                if let err = err {
-                                    print("Oh noes!: \(err.localizedDescription)")
-                                } else {
-                                    self.view.window?.rootViewController = storyboard.instantiateViewController(identifier: "HomeViewController")
-                                    self.view.window?.makeKeyAndVisible()
-                                }
+                            if let err = err {
+                                print("Oh noes!: \(err.localizedDescription)")
+                            } else {
+                                self.view.window?.rootViewController = storyboard.instantiateViewController(identifier: "HomeViewController")
+                                self.view.window?.makeKeyAndVisible()
+                            }
+                        }
                     }
-                    }
-                    }
-                  }else {
-                    //Username is taken
-                    self.showUsernameTakenAlert()
                 }
+            }else {
+                //Username is taken
+                self.showUsernameTakenAlert()
+            }
         }
     }
 }
