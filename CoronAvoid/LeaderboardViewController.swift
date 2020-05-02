@@ -52,7 +52,7 @@ class LeaderboardViewController: UIViewController {
         
         db = Firestore.firestore()
         
-        db.collection("users").order(by: "timeHome").limit(to: 10).addSnapshotListener { querySnapshot, error in
+        db.collection("users").order(by: "dateLastLeft").limit(to: 10).addSnapshotListener { querySnapshot, error in
             guard let querySnapshot = querySnapshot else {
                 print("Snapshot retreival error! \(error!)")
                 return
@@ -60,7 +60,11 @@ class LeaderboardViewController: UIViewController {
             var i = 0
             for doc in querySnapshot.documents{
                 users.insert("\(doc.get("username")!)", at: i)
-                scores.insert("\(doc.get("timeHome")!)", at: i)
+               
+                let copiedTimeStamp = doc.get("dateLastLeft") as! Timestamp
+                let lbDate = copiedTimeStamp.dateValue()
+                let dateString = Date().lbOffset(from: lbDate)
+                scores.insert(dateString, at: i)
                 i += 1
             }
             
@@ -84,5 +88,53 @@ class LeaderboardViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
+
+extension Date {
+    /// Returns the amount of years from another date
+    func years(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.year], from: date, to: self).year ?? 0
+    }
+    /// Returns the amount of months from another date
+    func months(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.month], from: date, to: self).month ?? 0
+    }
+    /// Returns the amount of weeks from another date
+    func weeks(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.weekOfMonth], from: date, to: self).weekOfMonth ?? 0
+    }
+    /// Returns the amount of days from another date
+    func days(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.day], from: date, to: self).day ?? 0
+    }
+    /// Returns the amount of hours from another date
+    func hours(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.hour], from: date, to: self).hour ?? 0
+    }
+//    /// Returns the amount of minutes from another date
+//    func minutes(from date: Date) -> Int {
+//        return Calendar.current.dateComponents([.minute], from: date, to: self).minute ?? 0
+//    }
+//    /// Returns the amount of seconds from another date
+//    func seconds(from date: Date) -> Int {
+//        return Calendar.current.dateComponents([.second], from: date, to: self).second ?? 0
+//    }
+    /// Returns the a custom time interval description from another date
+    func lbOffset(from date: Date) -> String {
+        if years(from: date)   == 1 { return "1 year"   }
+        if years(from: date)   > 0 { return "\(years(from: date)) years"   }
+        if months(from: date)   == 1 { return "1 month"   }
+        if months(from: date)  > 0 { return "\(months(from: date)) months"  }
+        if weeks(from: date)   == 1 { return "1 week"   }
+        if weeks(from: date)   > 0 { return "\(weeks(from: date)) weeks"   }
+        if days(from: date)   == 1 { return "1 day"   }
+        if days(from: date)    > 0 { return "\(days(from: date)) days"    }
+        if hours(from: date)   == 1 { return "1 hour"   }
+        if hours(from: date)   > 0 { return "\(hours(from: date)) hours"   }
+//        if minutes(from: date) > 0 { return "\(minutes(from: date))m" }
+//        if seconds(from: date) > 0 { return "\(seconds(from: date))s" }
+        return "0 hours"
+    }
+}
+    
+
