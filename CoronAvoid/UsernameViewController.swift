@@ -21,10 +21,10 @@ class UsernameViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-        super.touchesBegan(touches, with: event)
-    }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        view.endEditing(true)
+//        super.touchesBegan(touches, with: event)
+//    }
     
     func showUsernameTakenAlert() {
         let alert = UIAlertController(title: "Username taken!", message: "Please choose another username.", preferredStyle: .alert)
@@ -58,7 +58,7 @@ class UsernameViewController: UIViewController {
                         }
                     } else {
                         //If User doesn't exists, create new user
-                        let userData: [String: Any] = ["username": usernameEntered, "dateBeganStayingHome":Date()]
+                        let userData: [String: Any] = ["username": usernameEntered, "dateLastLeft": Timestamp(date: Date())]
                         userRef.setData(userData) {
                             (err) in
                             if let err = err {

@@ -335,7 +335,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="newDate" destination="9mC-19-whj" id="h2c-1u-cRq"/>
+                        <outlet property="lastDatePicker" destination="9mC-19-whj" id="VdK-Za-Jpn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3C-Nf-dVO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -417,8 +417,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="days at home." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lx7-tK-Yhk">
-                                <rect key="frame" x="131.5" y="505" width="151.5" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lx7-tK-Yhk">
+                                <rect key="frame" x="181" y="505" width="52" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -448,14 +448,22 @@
                                     <constraint firstAttribute="height" constant="80" id="Sla-fB-ONA"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="at home." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ox-56-ikH">
+                                <rect key="frame" x="160" y="543" width="94.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.4039215686" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zbi-q0-4pD" firstAttribute="top" secondItem="EQw-Av-c5h" secondAttribute="bottom" constant="26" id="83x-Av-ZE4"/>
+                            <constraint firstItem="7Ox-56-ikH" firstAttribute="top" secondItem="Lx7-tK-Yhk" secondAttribute="bottom" constant="8" id="Diw-tN-hgF"/>
                             <constraint firstItem="YDB-y2-qV2" firstAttribute="top" secondItem="oGm-t8-t7f" secondAttribute="bottom" constant="10" id="JAW-3E-i52"/>
                             <constraint firstItem="zbi-q0-4pD" firstAttribute="centerX" secondItem="YDB-y2-qV2" secondAttribute="centerX" id="LgH-l9-WKY"/>
                             <constraint firstItem="BbE-nC-2uh" firstAttribute="centerX" secondItem="EvJ-mU-1i0" secondAttribute="centerX" id="PTf-Rf-sK6"/>
                             <constraint firstItem="pxS-CW-2eg" firstAttribute="centerX" secondItem="YDB-y2-qV2" secondAttribute="centerX" id="QLd-pc-kgs"/>
+                            <constraint firstItem="7Ox-56-ikH" firstAttribute="centerX" secondItem="EvJ-mU-1i0" secondAttribute="centerX" id="Rm5-da-AJ7"/>
                             <constraint firstItem="oGm-t8-t7f" firstAttribute="top" secondItem="pxS-CW-2eg" secondAttribute="bottom" constant="10" id="UwT-L8-b2R"/>
                             <constraint firstItem="oGm-t8-t7f" firstAttribute="centerX" secondItem="YDB-y2-qV2" secondAttribute="centerX" id="auj-nt-24F"/>
                             <constraint firstItem="YDB-y2-qV2" firstAttribute="centerY" secondItem="EvJ-mU-1i0" secondAttribute="centerY" id="fcH-Zy-SkN"/>
@@ -472,6 +480,8 @@
                     <tabBarItem key="tabBarItem" title="Home" id="cmf-Je-EoV"/>
                     <connections>
                         <outlet property="currentDateLabel" destination="pxS-CW-2eg" id="E5c-HV-rJ7"/>
+                        <outlet property="streakNum" destination="YDB-y2-qV2" id="RJX-Tq-Kfr"/>
+                        <outlet property="streakUnit" destination="Lx7-tK-Yhk" id="sl0-Ux-4Aj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hca-Gm-h3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

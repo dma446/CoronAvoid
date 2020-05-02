@@ -39,22 +39,22 @@ class SettingsViewController: UITableViewController {
             self.present(signOutWarning, animated: true, completion: nil)
         }
         
-        else if (indexPath[0]==1 && indexPath[1]==1) {
-            let homeRemoveWarning = UIAlertController(title: "Remove home location?", message: "Are you sure you'd like to remove your home location? This will turn off geofencing.", preferredStyle: .actionSheet)
-            
-            let homeRemoveOK = UIAlertAction(title: "Yes", style: .default, handler: {(action)->Void in
-//                self.signOutBtnPressed()
-                print("home location removed")
-            })
-            
-            let cancelHomeRemove = UIAlertAction(title: "Cancel", style: .cancel) {(action)->Void in
-                print("removal cancelled")
-            }
-            
-            homeRemoveWarning.addAction(homeRemoveOK)
-            homeRemoveWarning.addAction(cancelHomeRemove)
-            self.present(homeRemoveWarning, animated: true, completion: nil)
-        }
+//        else if (indexPath[0]==1 && indexPath[1]==1) {
+//            let homeRemoveWarning = UIAlertController(title: "Remove home location?", message: "Are you sure you'd like to remove your home location? This will turn off geofencing.", preferredStyle: .actionSheet)
+//
+//            let homeRemoveOK = UIAlertAction(title: "Yes", style: .default, handler: {(action)->Void in
+////                self.signOutBtnPressed()
+//                print("home location removed")
+//            })
+//
+//            let cancelHomeRemove = UIAlertAction(title: "Cancel", style: .cancel) {(action)->Void in
+//                print("removal cancelled")
+//            }
+//
+//            homeRemoveWarning.addAction(homeRemoveOK)
+//            homeRemoveWarning.addAction(cancelHomeRemove)
+//            self.present(homeRemoveWarning, animated: true, completion: nil)
+//        }
         
         
         tableView.deselectRow(at: indexPath, animated: true)
