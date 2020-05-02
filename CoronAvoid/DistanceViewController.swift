@@ -69,6 +69,7 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
     }
     
     @IBAction func closeVC(_ sender: Any) {
+        beaconSwitch.setOn(false, animated: true)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -110,7 +111,7 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
     }
     
     func createBeaconRegion() -> CLBeaconRegion?{
-        return CLBeaconRegion(proximityUUID: uuid, major: major, identifier: minor)
+        return CLBeaconRegion(beaconIdentityConstraint: CLBeaconIdentityConstraint(uuid: uuid, major: major, minor: minor), identifier: beaconID)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status:CLAuthorizationStatus){
@@ -124,9 +125,9 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
     }
     
     func startScanning(){
-        let beaconRegion = createBeaconRegion()
+        let beaconRegion = createBeaconRegion()!
         locationManager.startMonitoring(for: beaconRegion)
-        locationManager.startRangingBeacons(in: beaconRegion)
+        locationManager.startRangingBeacons(satisfying: CLBeaconIdentityConstraint(uuid, major, minor))
     }
     
     func locationManger(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion){
