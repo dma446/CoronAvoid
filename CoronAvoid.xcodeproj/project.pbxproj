@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		03009419245949890014AEF1 /* DateEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03009418245949890014AEF1 /* DateEntryViewController.swift */; };
+		0328A234245E5F180032E752 /* Pods_CoronAvoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF2C10D1ACEE652CAF5E38 /* Pods_CoronAvoid.framework */; };
+		0328A235245E5F180032E752 /* Pods_CoronAvoid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF2C10D1ACEE652CAF5E38 /* Pods_CoronAvoid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0328A28D245E5F5F0032E752 /* Pods_CoronAvoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF2C10D1ACEE652CAF5E38 /* Pods_CoronAvoid.framework */; };
 		03F5E0122447BA2C00D19E54 /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5E0112447BA2C00D19E54 /* DistanceViewController.swift */; };
 		03F5E0142447BA4800D19E54 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5E0132447BA4800D19E54 /* LeaderboardViewController.swift */; };
 		03F5E0162447BA7800D19E54 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5E0152447BA7700D19E54 /* ResourcesViewController.swift */; };
@@ -21,11 +24,56 @@
 		13D9B6C5245A8D6200111A77 /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D9B6C4245A8D6100111A77 /* UsernameViewController.swift */; };
 		13EEF942244368AD009A1C51 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EEF941244368AD009A1C51 /* SettingsViewController.swift */; };
 		7B388BBD245CC977002889C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B388BBC245CC977002889C7 /* GoogleService-Info.plist */; };
-		BC5AF7BC6BD735CDCA71374A /* Pods_CoronAvoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF2C10D1ACEE652CAF5E38 /* Pods_CoronAvoid.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0328A236245E5F180032E752 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0328A235245E5F180032E752 /* Pods_CoronAvoid.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		03009418245949890014AEF1 /* DateEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEntryViewController.swift; sourceTree = "<group>"; };
+		0328A237245E5F5E0032E752 /* absl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = absl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A238245E5F5E0032E752 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A239245E5F5E0032E752 /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A23A245E5F5E0032E752 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A23B245E5F5E0032E752 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A23C245E5F5E0032E752 /* FirebaseAnonymousAuthUI.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = FirebaseAnonymousAuthUI.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A23D245E5F5E0032E752 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A23E245E5F5E0032E752 /* FirebaseAuthUI.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = FirebaseAuthUI.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A23F245E5F5E0032E752 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A240245E5F5E0032E752 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A241245E5F5E0032E752 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A242245E5F5E0032E752 /* FirebaseEmailAuthUI.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = FirebaseEmailAuthUI.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A243245E5F5E0032E752 /* FirebaseFacebookAuthUI.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = FirebaseFacebookAuthUI.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A244245E5F5E0032E752 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A245245E5F5E0032E752 /* FirebaseGoogleAuthUI.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = FirebaseGoogleAuthUI.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A246245E5F5E0032E752 /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A247245E5F5E0032E752 /* FirebaseOAuthUI.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = FirebaseOAuthUI.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A248245E5F5E0032E752 /* FirebasePhoneAuthUI.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = FirebasePhoneAuthUI.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A249245E5F5E0032E752 /* FirebaseStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A24A245E5F5E0032E752 /* FirebaseUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A24B245E5F5E0032E752 /* GoogleDataTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleDataTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A24C245E5F5E0032E752 /* GoogleDataTransportCCTSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleDataTransportCCTSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A24D245E5F5E0032E752 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A24E245E5F5E0032E752 /* grpc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = grpc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A24F245E5F5E0032E752 /* gRPCCertificates-Cpp.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = "gRPCCertificates-Cpp.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A250245E5F5E0032E752 /* grpcpp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = grpcpp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A251245E5F5E0032E752 /* GTMAppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMAppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A252245E5F5E0032E752 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A253245E5F5E0032E752 /* leveldb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = leveldb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A254245E5F5E0032E752 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A255245E5F5E0032E752 /* openssl_grpc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = openssl_grpc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0328A256245E5F5E0032E752 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F5E0112447BA2C00D19E54 /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
 		03F5E0132447BA4800D19E54 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		03F5E0152447BA7700D19E54 /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC5AF7BC6BD735CDCA71374A /* Pods_CoronAvoid.framework in Frameworks */,
+				0328A28D245E5F5F0032E752 /* Pods_CoronAvoid.framework in Frameworks */,
+				0328A234245E5F180032E752 /* Pods_CoronAvoid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +110,38 @@
 		011EE9213E55B42EC27A5175 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0328A237245E5F5E0032E752 /* absl.framework */,
+				0328A238245E5F5E0032E752 /* AppAuth.framework */,
+				0328A239245E5F5E0032E752 /* FBLPromises.framework */,
+				0328A23A245E5F5E0032E752 /* FBSDKCoreKit.framework */,
+				0328A23B245E5F5E0032E752 /* FBSDKLoginKit.framework */,
+				0328A23C245E5F5E0032E752 /* FirebaseAnonymousAuthUI.bundle */,
+				0328A23D245E5F5E0032E752 /* FirebaseAuth.framework */,
+				0328A23E245E5F5E0032E752 /* FirebaseAuthUI.bundle */,
+				0328A23F245E5F5E0032E752 /* FirebaseCore.framework */,
+				0328A240245E5F5E0032E752 /* FirebaseCoreDiagnostics.framework */,
+				0328A241245E5F5E0032E752 /* FirebaseDatabase.framework */,
+				0328A242245E5F5E0032E752 /* FirebaseEmailAuthUI.bundle */,
+				0328A243245E5F5E0032E752 /* FirebaseFacebookAuthUI.bundle */,
+				0328A244245E5F5E0032E752 /* FirebaseFirestore.framework */,
+				0328A245245E5F5E0032E752 /* FirebaseGoogleAuthUI.bundle */,
+				0328A246245E5F5E0032E752 /* FirebaseInstallations.framework */,
+				0328A247245E5F5E0032E752 /* FirebaseOAuthUI.bundle */,
+				0328A248245E5F5E0032E752 /* FirebasePhoneAuthUI.bundle */,
+				0328A249245E5F5E0032E752 /* FirebaseStorage.framework */,
+				0328A24A245E5F5E0032E752 /* FirebaseUI.framework */,
+				0328A24B245E5F5E0032E752 /* GoogleDataTransport.framework */,
+				0328A24C245E5F5E0032E752 /* GoogleDataTransportCCTSupport.framework */,
+				0328A24D245E5F5E0032E752 /* GoogleUtilities.framework */,
+				0328A24E245E5F5E0032E752 /* grpc.framework */,
+				0328A24F245E5F5E0032E752 /* gRPCCertificates-Cpp.bundle */,
+				0328A250245E5F5E0032E752 /* grpcpp.framework */,
+				0328A251245E5F5E0032E752 /* GTMAppAuth.framework */,
+				0328A252245E5F5E0032E752 /* GTMSessionFetcher.framework */,
+				0328A253245E5F5E0032E752 /* leveldb.framework */,
+				0328A254245E5F5E0032E752 /* nanopb.framework */,
+				0328A255245E5F5E0032E752 /* openssl_grpc.framework */,
+				0328A256245E5F5E0032E752 /* SDWebImage.framework */,
 				C6FF2C10D1ACEE652CAF5E38 /* Pods_CoronAvoid.framework */,
 			);
 			name = Frameworks;
@@ -128,6 +209,7 @@
 				133F88CF24381A9300D501D8 /* Resources */,
 				38F0F35007C8906F3CE4B261 /* [CP] Embed Pods Frameworks */,
 				74E64B46EF6CB3DF49F910AC /* [CP] Copy Pods Resources */,
+				0328A236245E5F180032E752 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -405,14 +487,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 47KF4DNCUL;
+				DEVELOPMENT_TEAM = P4GT2YG9Q4;
 				INFOPLIST_FILE = CoronAvoid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoronAvoid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoronAvoidd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -427,14 +509,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 47KF4DNCUL;
+				DEVELOPMENT_TEAM = P4GT2YG9Q4;
 				INFOPLIST_FILE = CoronAvoid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoronAvoid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoronAvoidd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

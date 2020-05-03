@@ -270,27 +270,27 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="username"/>
-                                <connections>
-                                    <action selector="returnUsernameWithSender:" destination="ulf-9K-QOr" eventType="primaryActionTriggered" id="dYc-Vt-W5Q"/>
-                                </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPh-5H-9v6">
+                                <rect key="frame" x="190" y="349" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="returnUsernameWithSender:" destination="ulf-9K-QOr" eventType="touchUpInside" id="Mi9-Uw-FzK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="uwx-1d-CMZ" firstAttribute="centerX" secondItem="zsN-RQ-pJi" secondAttribute="centerX" id="H0T-Wx-E5B"/>
+                            <constraint firstItem="dPh-5H-9v6" firstAttribute="centerX" secondItem="zsN-RQ-pJi" secondAttribute="centerX" id="IEu-9y-6MX"/>
                             <constraint firstItem="aJj-Ix-5LS" firstAttribute="centerX" secondItem="zsN-RQ-pJi" secondAttribute="centerX" id="a0c-0L-FsQ"/>
+                            <constraint firstItem="dPh-5H-9v6" firstAttribute="top" secondItem="uwx-1d-CMZ" secondAttribute="bottom" constant="8" id="cfW-Mz-pDg"/>
                             <constraint firstItem="uwx-1d-CMZ" firstAttribute="top" secondItem="aJj-Ix-5LS" secondAttribute="bottom" constant="8" id="e1L-XD-kW6"/>
                             <constraint firstItem="aJj-Ix-5LS" firstAttribute="centerY" secondItem="zsN-RQ-pJi" secondAttribute="centerY" constant="-200" id="tj5-qL-eoW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zsN-RQ-pJi"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Create New Username" id="VeG-j4-uhO">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="Adt-PY-7ch">
-                            <connections>
-                                <action selector="returnUsernameWithSender:" destination="ulf-9K-QOr" id="nJO-RI-S4M"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Create New Username" id="VeG-j4-uhO"/>
                     <connections>
                         <outlet property="usernameTextField" destination="uwx-1d-CMZ" id="lCP-qb-XUR"/>
                     </connections>

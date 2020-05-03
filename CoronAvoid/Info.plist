@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>CoronAvoid requests your permission to access Bluetooth in order to give you proximity alerts.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>CoronAvoid requests your permission to access your location in order to give you proximity alerts.</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>CoronAvoid requests your permission to access your location in order to give you proximity alerts.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -37,6 +31,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>CoronAvoid requests your permission to access Bluetooth in order to give you proximity alerts.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>CoronAvoid requests your permission to access Bluetooth in order to give you proximity alerts.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>CoronAvoid requests your permission to access your location in order to give you proximity alerts.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>CoronAvoid requests your permission to access your location in order to give you proximity alerts.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -62,11 +64,11 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDarkContent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
