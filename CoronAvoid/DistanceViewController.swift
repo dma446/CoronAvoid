@@ -64,7 +64,7 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
         locationManager.delegate = self
         peripheral = CBPeripheralManager()
         peripheral.delegate = self
-        power = NSNumber(integerLiteral: 20)
+        power = nil
         
         Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(onTimer), userInfo: nil, repeats: true)
         
@@ -152,9 +152,10 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
     }
     
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion){
-        if beacons.count > 0{
-            let nearestBeacon = beacons.first!
-            while(nearestBeacon.proximity == CLProximity.immediate){
+        let coronaBeacons = beacons.filter{ $0.proximity != CLProximity.unknown}
+        if coronaBeacons.count > 0{
+            let nearestBeacon = coronaBeacons[0] as CLBeacon
+            if(nearestBeacon.proximity == CLProximity.immediate){
                 AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             }
         }
