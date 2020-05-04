@@ -166,7 +166,7 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
         let coronaBeacons = beacons.filter{ $0.proximity != CLProximity.unknown}
         if coronaBeacons.count > 0{
             let nearestBeacon = coronaBeacons[0] as CLBeacon
-            if(nearestBeacon.proximity == CLProximity.immediate){
+            if(nearestBeacon.proximity == CLProximity.near){
                 AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             }
         }
