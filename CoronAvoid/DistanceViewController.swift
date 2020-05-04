@@ -44,11 +44,12 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         switch peripheral.state{
             case .poweredOff:
-                locationManager.stopRangingBeacons(satisfying: CLBeaconIdentityConstraint(uuid: uuid, major: major, minor: minor))
+                if(peripheral.isAdvertising){
+                    peripheral.stopAdvertising()
+                }
             case .poweredOn:
                 let myRegion = createBeaconRegion()!
                 advertiseDevice(region: myRegion)
-                locationManager.startRangingBeacons(satisfying: CLBeaconIdentityConstraint(uuid: uuid, major: major, minor: minor))
             default:
                 locationManager.requestAlwaysAuthorization()
         }
@@ -82,7 +83,16 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
         if beaconSwitch.isOn {
             isAnimating = true
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            locationManager.requestAlwaysAuthorization()
+            
+            if(CLLocationManager.authorizationStatus() != CLAuthorizationStatus.authorizedAlways){
+                locationManager.requestAlwaysAuthorization()
+            }
+            if(CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
+                startScanning()
+                if(!peripheral.isAdvertising){
+                    advertiseDevice(region: createBeaconRegion()!)
+                }
+            }
             
             // update db timestamp
             let newDate = Date()
@@ -108,7 +118,6 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
                 peripheral.stopAdvertising()
             }
             locationManager.stopRangingBeacons(satisfying: CLBeaconIdentityConstraint(uuid: uuid, major: major, minor: minor))
-                
             }
     }
     
@@ -135,6 +144,7 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
         return CLBeaconRegion(beaconIdentityConstraint: CLBeaconIdentityConstraint(uuid: uuid, major: major, minor: minor), identifier: beaconID)
     }
     
+    /*
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status:CLAuthorizationStatus){
         if status == .authorizedAlways{
             if(CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self)){
@@ -144,6 +154,7 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
             }
         }
     }
+     */
     
     func startScanning(){
         let beaconRegion = createBeaconRegion()!
