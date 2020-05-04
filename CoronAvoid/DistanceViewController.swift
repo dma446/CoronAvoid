@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 import CoreBluetooth
 import AudioToolbox
+import AVFoundation
 import FirebaseAuth
 import GoogleSignIn
 import Firebase
@@ -31,6 +32,8 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
     
     var radarImage:UIImage?
     var isAnimating:Bool?
+    
+    var coughPlayer: AVAudioPlayer!
     
     var locationManager: CLLocationManager!
     var peripheral : CBPeripheralManager!
@@ -168,6 +171,14 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
             let nearestBeacon = coronaBeacons[0] as CLBeacon
             if(nearestBeacon.proximity == CLProximity.near){
                 AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                let audioFileLocation = Bundle.main.url(forResource: "cough", withExtension: "wav")
+                
+                do{
+                coughPlayer = try AVAudioPlayer(contentsOf: audioFileLocation!)
+                coughPlayer.play()
+                }catch{
+                print(error.localizedDescription)
+                }
             }
         }
     }

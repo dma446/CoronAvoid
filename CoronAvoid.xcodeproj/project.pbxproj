@@ -42,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		03009418245949890014AEF1 /* DateEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEntryViewController.swift; sourceTree = "<group>"; };
+		0323CC6B24609449000C0908 /* cough.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cough.wav; sourceTree = "<group>"; };
 		0328A237245E5F5E0032E752 /* absl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = absl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0328A238245E5F5E0032E752 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0328A239245E5F5E0032E752 /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +148,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0323CC6A24609449000C0908 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0323CC6B24609449000C0908 /* cough.wav */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		133F88C824381A9300D501D8 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +192,7 @@
 				133F88DF24381A9600D501D8 /* LaunchScreen.storyboard */,
 				133F88E224381A9600D501D8 /* Info.plist */,
 				7B388BBC245CC977002889C7 /* GoogleService-Info.plist */,
+				0323CC6A24609449000C0908 /* Resources */,
 			);
 			path = CoronAvoid;
 			sourceTree = "<group>";
