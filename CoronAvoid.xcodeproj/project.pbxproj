@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		03009419245949890014AEF1 /* DateEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03009418245949890014AEF1 /* DateEntryViewController.swift */; };
+		031664BF2468DD5F004A85EE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 031664BE2468DD5F004A85EE /* AVFoundation.framework */; };
+		031664C02468E0CA004A85EE /* cough.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0323CC6B24609449000C0908 /* cough.wav */; };
 		0328A234245E5F180032E752 /* Pods_CoronAvoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF2C10D1ACEE652CAF5E38 /* Pods_CoronAvoid.framework */; };
 		0328A235245E5F180032E752 /* Pods_CoronAvoid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF2C10D1ACEE652CAF5E38 /* Pods_CoronAvoid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0328A28D245E5F5F0032E752 /* Pods_CoronAvoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF2C10D1ACEE652CAF5E38 /* Pods_CoronAvoid.framework */; };
@@ -42,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		03009418245949890014AEF1 /* DateEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEntryViewController.swift; sourceTree = "<group>"; };
+		031664BE2468DD5F004A85EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0323CC6B24609449000C0908 /* cough.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cough.wav; sourceTree = "<group>"; };
 		0328A237245E5F5E0032E752 /* absl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = absl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0328A238245E5F5E0032E752 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +105,7 @@
 			files = (
 				0328A28D245E5F5F0032E752 /* Pods_CoronAvoid.framework in Frameworks */,
 				0328A234245E5F180032E752 /* Pods_CoronAvoid.framework in Frameworks */,
+				031664BF2468DD5F004A85EE /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +115,7 @@
 		011EE9213E55B42EC27A5175 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				031664BE2468DD5F004A85EE /* AVFoundation.framework */,
 				0328A237245E5F5E0032E752 /* absl.framework */,
 				0328A238245E5F5E0032E752 /* AppAuth.framework */,
 				0328A239245E5F5E0032E752 /* FBLPromises.framework */,
@@ -268,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031664C02468E0CA004A85EE /* cough.wav in Resources */,
 				133F88E124381A9600D501D8 /* LaunchScreen.storyboard in Resources */,
 				133F88DE24381A9600D501D8 /* Assets.xcassets in Resources */,
 				133F88DC24381A9300D501D8 /* Main.storyboard in Resources */,

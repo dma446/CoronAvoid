@@ -33,7 +33,7 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
     var radarImage:UIImage?
     var isAnimating:Bool?
     
-    var coughPlayer: AVAudioPlayer!
+    var coughPlayer = AVAudioPlayer()
     
     var locationManager: CLLocationManager!
     var peripheral : CBPeripheralManager!
@@ -71,6 +71,14 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
         power = nil
         
         Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(onTimer), userInfo: nil, repeats: true)
+        
+        let coughPath = Bundle.main.path(forResource: "cough", ofType:"wav")!
+        
+        do{
+        coughPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: coughPath))
+        }catch{
+        print(error.localizedDescription)
+        }
         
         uuid = UUID(uuidString: "7959A986-DC83-413A-B22E-EBE8B3606B42")
         major = 100
@@ -112,6 +120,12 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
                 }
             }
             
+//            do {
+//               try AVAudioSession.sharedInstance().setCategory(.playback)
+//            } catch(let error) {
+//                print(error.localizedDescription)
+//            }
+//            coughPlayer.play()
             // on for testing
             //self.appDelegate?.sendNotification()
         }
@@ -171,14 +185,13 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
             let nearestBeacon = coronaBeacons[0] as CLBeacon
             if(nearestBeacon.proximity == CLProximity.near){
                 AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-                let audioFileLocation = Bundle.main.url(forResource: "cough", withExtension: "wav")
                 
-                do{
-                coughPlayer = try AVAudioPlayer(contentsOf: audioFileLocation!)
-                coughPlayer.play()
-                }catch{
-                print(error.localizedDescription)
+                do {
+                   try AVAudioSession.sharedInstance().setCategory(.playback)
+                } catch(let error) {
+                    print(error.localizedDescription)
                 }
+                coughPlayer.play()
             }
         }
     }
