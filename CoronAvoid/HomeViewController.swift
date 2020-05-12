@@ -18,6 +18,9 @@ class HomeViewController: UIViewController {
     
     var db: Firestore!
     
+    let user = Auth.auth().currentUser!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        if user?.uid == nil {
@@ -36,7 +39,6 @@ class HomeViewController: UIViewController {
         }
     
     override func viewWillAppear(_ animated: Bool) {
-        let user = Auth.auth().currentUser!
         //pull date from user database and display day streak
         self.db = Firestore.firestore()
         let userRef = self.db.document("users/\(user.email!)")

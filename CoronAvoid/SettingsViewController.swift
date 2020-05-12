@@ -71,10 +71,10 @@ class SettingsViewController: UITableViewController {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-            self.signOut()
         } catch let signOutError as NSError {
             print("Sign Out Error: %@", signOutError)
         }
+        self.signOut()
     }
     
 }
