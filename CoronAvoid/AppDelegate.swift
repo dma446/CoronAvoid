@@ -15,20 +15,20 @@ import GoogleSignIn
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let notificationCenter = UNUserNotificationCenter.current()
+//    let notificationCenter = UNUserNotificationCenter.current()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //notifications
-        notificationCenter.delegate = self
-        
-        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
-        notificationCenter.requestAuthorization(options: options) {
-            (didAllow, error) in
-            if !didAllow {
-                print("User has declined notifications")
-            }
-        }
+//        notificationCenter.delegate = self
+//
+//        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+//        notificationCenter.requestAuthorization(options: options) {
+//            (didAllow, error) in
+//            if !didAllow {
+//                print("User has declined notifications")
+//            }
+//        }
         
         FirebaseApp.configure()
         //Initialize sign-in
@@ -61,47 +61,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-extension AppDelegate: UNUserNotificationCenterDelegate {
-    
-    
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                willPresent notification: UNNotification,
-                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        
-        completionHandler([.alert, .sound])
-    }
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                didReceive response: UNNotificationResponse,
-                                withCompletionHandler completionHandler: @escaping () -> Void) {
-        
-        if response.notification.request.identifier == "Local Notification" {
-            print("Handling notifications with the Local Notification Identifier")
-        }
-        
-        completionHandler()
-    }
-    
-    func sendNotification() {
-        
-        let notificationContent = UNMutableNotificationContent()
-        notificationContent.title = "Another User Detected"
-        notificationContent.body = "Looks like you're in someone else's bubble"
-        notificationContent.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "cough.wav"))
-        
-        // need to change trigger to CLocation/Beacon instead of time interval
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-        
-        let identifier = "Local Notification"
-        let request = UNNotificationRequest(identifier: identifier, content: notificationContent, trigger: trigger)
-
-        notificationCenter.add(request) { (error) in
-            if let error = error {
-                print("Error \(error.localizedDescription)")
-            }
-        }
-    }
-}
+//extension AppDelegate: UNUserNotificationCenterDelegate {
+//
+//
+//
+//    func userNotificationCenter(_ center: UNUserNotificationCenter,
+//                                willPresent notification: UNNotification,
+//                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//
+//        completionHandler([.alert, .sound])
+//    }
+//
+//    func userNotificationCenter(_ center: UNUserNotificationCenter,
+//                                didReceive response: UNNotificationResponse,
+//                                withCompletionHandler completionHandler: @escaping () -> Void) {
+//
+//        if response.notification.request.identifier == "Local Notification" {
+//            print("Handling notifications with the Local Notification Identifier")
+//        }
+//
+//        completionHandler()
+//    }
+//
+//    func sendNotification() {
+//
+//        let notificationContent = UNMutableNotificationContent()
+//        notificationContent.title = "Another User Detected"
+//        notificationContent.body = "Looks like you're in someone else's bubble"
+//        notificationContent.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "cough.wav"))
+//
+//        // need to change trigger to CLocation/Beacon instead of time interval
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+//
+//        let identifier = "Local Notification"
+//        let request = UNNotificationRequest(identifier: identifier, content: notificationContent, trigger: trigger)
+//
+//        notificationCenter.add(request) { (error) in
+//            if let error = error {
+//                print("Error \(error.localizedDescription)")
+//            }
+//        }
+//    }
+//}
 
 

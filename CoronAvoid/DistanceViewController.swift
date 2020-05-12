@@ -62,6 +62,8 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        UIApplication.shared.isIdleTimerDisabled = true
+        
         isAnimating = false
         beaconSwitch.setOn(false, animated: false)
         locationManager = CLLocationManager()
@@ -83,6 +85,11 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
         uuid = UUID(uuidString: "7959A986-DC83-413A-B22E-EBE8B3606B42")
         major = 100
         minor = 1
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     
     @IBAction func closeVC(_ sender: Any) {
