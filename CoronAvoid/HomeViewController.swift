@@ -23,11 +23,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if user?.uid == nil {
-//            //print("Ah, man!")
-//        } else {
-//            //print("Hello, World!")
-//        }
         
         //display current date
         let currentDate = Date()

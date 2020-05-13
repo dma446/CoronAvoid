@@ -31,9 +31,9 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>CoronAvoid requests your permission to access Bluetooth in order to give you proximity alerts.</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>CoronAvoid requests your permission to access Bluetooth in order to give you proximity alerts.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>CoronAvoid requests your permission to access Bluetooth in order to give you proximity alerts.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>CoronAvoid requests your permission to access your location in order to give you proximity alerts.</string>

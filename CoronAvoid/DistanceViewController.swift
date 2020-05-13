@@ -127,14 +127,6 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
                 }
             }
             
-//            do {
-//               try AVAudioSession.sharedInstance().setCategory(.playback)
-//            } catch(let error) {
-//                print(error.localizedDescription)
-//            }
-//            coughPlayer.play()
-            // on for testing
-            //self.appDelegate?.sendNotification()
         }
         else {
             isAnimating = false

@@ -21,11 +21,6 @@ class UsernameViewController: UIViewController {
         super.viewDidLoad()
     }
     
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        view.endEditing(true)
-//        super.touchesBegan(touches, with: event)
-//    }
-    
     func showUsernameTakenAlert() {
         let alert = UIAlertController(title: "Username taken!", message: "Please choose another username.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))

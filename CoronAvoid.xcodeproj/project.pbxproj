@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		03009419245949890014AEF1 /* DateEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03009418245949890014AEF1 /* DateEntryViewController.swift */; };
-		031664BF2468DD5F004A85EE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 031664BE2468DD5F004A85EE /* AVFoundation.framework */; };
 		031664C02468E0CA004A85EE /* cough.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0323CC6B24609449000C0908 /* cough.wav */; };
 		0328A234245E5F180032E752 /* Pods_CoronAvoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF2C10D1ACEE652CAF5E38 /* Pods_CoronAvoid.framework */; };
 		0328A235245E5F180032E752 /* Pods_CoronAvoid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C6FF2C10D1ACEE652CAF5E38 /* Pods_CoronAvoid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -105,7 +104,6 @@
 			files = (
 				0328A28D245E5F5F0032E752 /* Pods_CoronAvoid.framework in Frameworks */,
 				0328A234245E5F180032E752 /* Pods_CoronAvoid.framework in Frameworks */,
-				031664BF2468DD5F004A85EE /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
