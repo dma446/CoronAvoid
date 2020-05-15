@@ -37,7 +37,6 @@ class HomeViewController: UIViewController {
         //pull date from user database and display day streak
         self.db = Firestore.firestore()
         let userRef = self.db.document("users/\(user.email!)")
-        //        let lastTimeStamp: Timestamp?
         userRef.getDocument { (doc, err) in
             if let doc = doc, doc.exists {
                 let lastTimeStamp = doc.get("dateLastLeft") as? Timestamp
@@ -51,8 +50,6 @@ class HomeViewController: UIViewController {
             }
         }
     }
-
-
 }
 
 extension Date {

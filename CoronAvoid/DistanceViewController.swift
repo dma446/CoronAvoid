@@ -66,25 +66,28 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
         
         isAnimating = false
         beaconSwitch.setOn(false, animated: false)
+        
+        // set up beacon
         locationManager = CLLocationManager()
         locationManager.delegate = self
         peripheral = CBPeripheralManager()
         peripheral.delegate = self
         power = nil
+        uuid = UUID(uuidString: "7959A986-DC83-413A-B22E-EBE8B3606B42")
+        major = 100
+        minor = 1
         
+        // set up animation
         Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(onTimer), userInfo: nil, repeats: true)
         
+        // set up sound
         let coughPath = Bundle.main.path(forResource: "cough", ofType:"wav")!
-        
         do{
         coughPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: coughPath))
         }catch{
         print(error.localizedDescription)
         }
         
-        uuid = UUID(uuidString: "7959A986-DC83-413A-B22E-EBE8B3606B42")
-        major = 100
-        minor = 1
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -102,9 +105,11 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
             isAnimating = true
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
+            // request and turn on location services
             if(CLLocationManager.authorizationStatus() != CLAuthorizationStatus.authorizedAlways){
                 locationManager.requestAlwaysAuthorization()
             }
+            // start advertising
             if(CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
                 startScanning()
                 if(!peripheral.isAdvertising){
@@ -139,6 +144,7 @@ class DistanceViewController: UIViewController, CLLocationManagerDelegate, CBPer
     
     
     @objc func onTimer() {
+        // run animation
         if (isAnimating ?? false) {
             let radarImage = UIImage(named: "Beacon Ring")
             let radarImageView = UIImageView(image: radarImage)

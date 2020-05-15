@@ -44,6 +44,7 @@ class LeaderboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        // let user = Auth.auth().currentUser
+        // populate leaderboard
         userLabelList = [userPosition1, userPosition2, userPosition3, userPosition4, userPosition5, userPosition6, userPosition7, userPosition8, userPosition9, userPosition10]
         scoreLabelList = [scorePosition1, scorePosition2, scorePosition3, scorePosition4, scorePosition5, scorePosition6, scorePosition7, scorePosition8, scorePosition9, scorePosition10]
         

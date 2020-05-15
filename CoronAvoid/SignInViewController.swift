@@ -20,6 +20,7 @@ class SignInViewController: UIViewController, GIDSignInDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //firebase authentication
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.delegate = self
     }
@@ -35,9 +36,8 @@ class SignInViewController: UIViewController, GIDSignInDelegate {
             if let document = document, document.exists {
                 self.nextVC = storyboard.instantiateViewController(identifier: "HomeViewController")
             } else {
+                // go to UsernameVC if no username set up
                 self.nextVC = storyboard.instantiateViewController(identifier: "UsernameViewController")
-                //usernameVC.prevVC = self
-               // self.nextVC = usernameVC
             }
             self.view.window?.rootViewController = self.nextVC
             self.view.window?.makeKeyAndVisible()
